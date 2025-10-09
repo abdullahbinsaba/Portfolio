@@ -1,107 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdullah | 3D Developer Portfolio</title>
-  <link rel="stylesheet" href="assests/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Bin Saba | Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-  <!-- ===================== INTRO SCREEN ===================== -->
-  <section id="intro-screen">
-    <div class="intro-container">
-      <h1>Do you want to enter <span>Abdullah’s Portfolio?</span></h1>
-      <div class="button-container">
-        <button id="yes-btn" class="btn yes">Yes</button>
-        <button id="no-btn" class="btn no">No</button>
-      </div>
+    <!-- Waves Background -->
+    <div class="waves-container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
     </div>
-  </section>
 
-  <!-- ===================== LOADING SCREEN ===================== -->
-  <section id="loading-screen" class="hidden">
-    <div class="abs-logo">
-      <span class="abs-letter">A</span>
-      <span class="abs-letter">B</span>
-      <span class="abs-letter">S</span>
-    </div>
-    <h2 class="loading-text">Loading Abdullah’s World...</h2>
-  </section>
-
-  <!-- ===================== 3D SCENE ===================== -->
-  <canvas id="scene" class="hidden"></canvas>
-
-  <!-- ===================== ABOUT PAGE ===================== -->
-  <section id="about-page" class="overlay hidden">
-    <div class="overlay-content">
-      <h1>About Me</h1>
-      <p>Hey there 👋 I’m <strong>Abdullah</strong>, a passionate <strong>Full Stack Developer</strong> and 
-        <strong>Data Manager</strong> at Drive Care. I build smart, efficient, and creative digital solutions — 
-        from business automation to dynamic 3D websites like this portfolio.</p>
-
-      <p>I’m pursuing my <strong>Software Engineering course</strong> from Aptech (2022–2025). 
-        I love merging technology with creativity, using tools like JavaScript, Python, and Three.js 
-        to make ideas come alive.</p>
-
-      <a href="resume.pdf" target="_blank" class="btn resume-btn">📄 View My Resume</a>
-      <button id="back-from-about" class="btn back-btn">Back</button>
-    </div>
-  </section>
-
-  <!-- ===================== CONTACT PAGE ===================== -->
-  <section id="contact-page" class="overlay hidden">
-    <div class="overlay-content">
-      <h1>Contact Me</h1>
-      <p>Let’s connect and create something incredible 🚀</p>
-      <div class="contact-links">
-        <a href="https://wa.me/923001234567" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
-        <a href="https://facebook.com/" target="_blank" class="btn facebook">📘 Facebook</a>
-        <a href="resume.pdf" target="_blank" class="btn cv">📄 View CV</a>
-      </div>
-      <button id="back-from-contact" class="btn back-btn">Back</button>
-    </div>
-  </section>
-
-  <!-- ===================== PROJECTS PAGE ===================== -->
-  <section id="projects-page" class="overlay hidden">
-    <div class="overlay-content">
-      <h1>Projects</h1>
-      <div class="projects">
-        <div class="project-card">
-          <h2>Track Point</h2>
-          <p>A smart sales and marketing platform to track leads, manage clients, and monitor results.</p>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">Abdullah</a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
-        <div class="project-card">
-          <h2>ERP System</h2>
-          <p>A powerful business management solution with secure login, inventory, and finance modules.</p>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Abdullah Bin Saba</h1>
+                    <h2>Full Stack <span class="highlight">Developer</span></h2>
+                    <p>I'm a passionate full stack developer with expertise in modern web technologies. I create efficient, scalable, and user-friendly applications that solve real-world problems.</p>
+                    <a href="#projects" class="btn">View My Work</a>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/image/human.JPG" alt="Abdullah Bin Saba" class="profile-img">
+                </div>
+            </div>
         </div>
-        <div class="project-card">
-          <h2>Portfolio</h2>
-          <p>This 3D world portfolio — a unique fusion of creativity and code!</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Abdullah Bin Saba, a 20-year-old full stack developer based in Karachi, Pakistan. I'm currently pursuing Software Engineering at Aptech, which I started in 2023.</p>
+                    <p>I completed my matriculation from Mama Baby Care School Karachi in 2022 and have been working as a Data Manager at Driver Care Company since 2023.</p>
+                    <p>I'm passionate about creating digital solutions that make a difference. My journey in technology started at a young age, and I've been constantly learning and evolving ever since.</p>
+                </div>
+                <div class="education">
+                    <h3>Education & Experience</h3>
+                    <div class="education-timeline">
+                        <div class="timeline-item">
+                            <h3>Software Engineering</h3>
+                            <p>Aptech | 2023 - Present</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Data Manager</h3>
+                            <p>Driver Care Company | 2023 - Present</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Matriculation</h3>
+                            <p>Mama Baby Care School Karachi | 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <button id="back-from-projects" class="btn back-btn">Back</button>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">HTML</div>
+                        <div class="skill-item">CSS</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">Bootstrap</div>
+                        <div class="skill-item">jQuery</div>
+                        <div class="skill-item">Flutter</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">.NET</div>
+                        <div class="skill-item">PHP</div>
+                        <div class="skill-item">Laravel</div>
+                        <div class="skill-item">Python</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">Git</div>
+                        <div class="skill-item">VS Code</div>
+                        <div class="skill-item">Responsive Design</div>
+                        <div class="skill-item">RESTful APIs</div>
+                        <div class="skill-item">Database Management</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/350x200" alt="Project 1" class="project-img">
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-featured e-commerce website with user authentication, product catalog, shopping cart, and payment integration.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Laravel</span>
+                        </div>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/350x200" alt="Project 2" class="project-img">
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>A responsive task management application with drag-and-drop functionality, team collaboration, and real-time updates.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/350x200" alt="Project 3" class="project-img">
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>A modern, responsive portfolio website with animations, contact form, and project showcase.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>sabaabdullah416@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+92 336 6630630</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Karachi, Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2023 Abdullah Bin Saba. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/923366630630" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll Buttons -->
+    <div class="scroll-btn scroll-up" id="scrollUp">
+        <i class="fas fa-chevron-up"></i>
     </div>
-  </section>
-
-  <!-- ===================== FUN ZONE PAGE ===================== -->
-  <section id="fun-page" class="overlay hidden">
-    <div class="overlay-content">
-      <h1>Welcome to the Fun Zone 🎮</h1>
-      <p>This is my creative sandbox where I experiment with design, animation, and motion graphics. 
-        Keep exploring, the road never ends!</p>
-      <button id="back-from-fun" class="btn back-btn">Back</button>
+    <div class="scroll-btn" id="scrollDown">
+        <i class="fas fa-chevron-down"></i>
     </div>
-  </section>
 
-  <!-- Background Music -->
-  <audio id="bg-music" loop>
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/16/audio_4aaf96cbd3.mp3" type="audio/mp3">
-  </audio>
-
-  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/GLTFLoader.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
