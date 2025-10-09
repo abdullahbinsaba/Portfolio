@@ -1,40 +1,158 @@
-/* Base Styles */
-:root {
-    --primary-color: #6c63ff;
-    --secondary-color: #4d44db;
-    --text-color: #f8f9fa;
-    --bg-color: #0f172a;
-    --glass-bg: rgba(15, 23, 42, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    --transition: all 0.3s ease;
-}
-
-[data-theme="light"] {
-    --primary-color: #6c63ff;
-    --secondary-color: #4d44db;
-    --text-color: #333;
-    --bg-color: #f8f9fa;
-    --glass-bg: rgba(248, 249, 250, 0.7);
-    --glass-border: rgba(0, 0, 0, 0.1);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-}
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* --- Intro Screen --- */
+#intro-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, #00111f, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.intro-container h1 {
+  font-size: 2rem;
+  color: #00aaff;
+  text-align: center;
+}
+
+.intro-container span {
+  color: #fff;
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.yes {
+  background: #007bff;
+}
+
+.no {
+  background: #444;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* --- Loading Screen --- */
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.abs-logo {
+  display: flex;
+  gap: 10px;
+}
+
+.abs-letter {
+  font-size: 5rem;
+  font-weight: bold;
+  color: red;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px red; }
+  to { text-shadow: 0 0 25px red; }
+}
+
+.hidden {
+  display: none;
+}
+
+/* --- Overlay Pages --- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+}
+
+.overlay-content {
+  max-width: 700px;
+  padding: 30px;
+}
+
+.overlay h1 {
+  font-size: 2.5rem;
+  color: #00ffff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 20px #00ffff;
+}
+
+.overlay p {
+  margin: 10px 0;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  background: rgba(0, 255, 255, 0.2);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Canvas full screen */
+#scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}    line-height: 1.6;
     overflow-x: hidden;
     transition: var(--transition);
 }
