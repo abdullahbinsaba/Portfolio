@@ -1,210 +1,107 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah Bin Saba | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdullah | 3D Developer Portfolio</title>
+  <link rel="stylesheet" href="./assests/css/stylw.css" />
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <header class="glass-nav">
-        <div class="container">
-            <a href="#" class="logo">Abdullah<span>BinSaba</span></a>
-            <nav>
-                <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li>
-                        <div class="theme-switcher">
-                            <input type="checkbox" id="theme-toggle">
-                            <label for="theme-toggle" class="theme-toggle-label">
-                                <i class="fas fa-sun"></i>
-                                <i class="fas fa-moon"></i>
-                                <span class="ball"></span>
-                            </label>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+  <!-- ===================== INTRO SCREEN ===================== -->
+  <section id="intro-screen">
+    <div class="intro-container">
+      <h1>Do you want to enter <span>Abdullah’s Portfolio?</span></h1>
+      <div class="button-container">
+        <button id="yes-btn" class="btn yes">Yes</button>
+        <button id="no-btn" class="btn no">No</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <section id="loading-screen" class="hidden">
+    <div class="abs-logo">
+      <span class="abs-letter">A</span>
+      <span class="abs-letter">B</span>
+      <span class="abs-letter">S</span>
+    </div>
+    <h2 class="loading-text">Loading Abdullah’s World...</h2>
+  </section>
+
+  <!-- ===================== 3D SCENE ===================== -->
+  <canvas id="scene" class="hidden"></canvas>
+
+  <!-- ===================== ABOUT PAGE ===================== -->
+  <section id="about-page" class="overlay hidden">
+    <div class="overlay-content">
+      <h1>About Me</h1>
+      <p>Hey there 👋 I’m <strong>Abdullah</strong>, a passionate <strong>Full Stack Developer</strong> and 
+        <strong>Data Manager</strong> at Drive Care. I build smart, efficient, and creative digital solutions — 
+        from business automation to dynamic 3D websites like this portfolio.</p>
+
+      <p>I’m pursuing my <strong>Software Engineering course</strong> from Aptech (2022–2025). 
+        I love merging technology with creativity, using tools like JavaScript, Python, and Three.js 
+        to make ideas come alive.</p>
+
+      <a href="resume.pdf" target="_blank" class="btn resume-btn">📄 View My Resume</a>
+      <button id="back-from-about" class="btn back-btn">Back</button>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT PAGE ===================== -->
+  <section id="contact-page" class="overlay hidden">
+    <div class="overlay-content">
+      <h1>Contact Me</h1>
+      <p>Let’s connect and create something incredible 🚀</p>
+      <div class="contact-links">
+        <a href="https://wa.me/923001234567" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
+        <a href="https://facebook.com/" target="_blank" class="btn facebook">📘 Facebook</a>
+        <a href="resume.pdf" target="_blank" class="btn cv">📄 View CV</a>
+      </div>
+      <button id="back-from-contact" class="btn back-btn">Back</button>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS PAGE ===================== -->
+  <section id="projects-page" class="overlay hidden">
+    <div class="overlay-content">
+      <h1>Projects</h1>
+      <div class="projects">
+        <div class="project-card">
+          <h2>Track Point</h2>
+          <p>A smart sales and marketing platform to track leads, manage clients, and monitor results.</p>
         </div>
-    </header>
-
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="hero-section glass">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="animated-text">Hi, I'm <span>Abdullah Bin Saba</span></h1>
-                    <h2 class="animated-subtext">Software Engineering Student & Data Manager</h2>
-                    <p class="animated-paragraph">Creating digital experiences with code and creativity</p>
-                    <a href="#contact" class="btn glass">Get In Touch</a>
-                </div>
-                <div class="hero-image">
-                    <div class="image-wrapper glass">
-                        <img src="./assets/img/DSC00614.JPG" alt="Abdullah Bin Saba">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2 class="section-title">About <span>Me</span></h2>
-                
-                <div class="about-grid">
-                    <div class="about-card glass">
-                        <h3>Who I Am</h3>
-                        <p>I'm Abdullah Bin Saba, a passionate Software Engineering student at Aptech Garden Center (2022-Present) with a background in Pre-Engineering from Islamia Govt Science College Karachi (2022-2024). Currently working as a Data Manager at Driver Care Company, I combine technical skills with practical experience.</p>
-                    </div>
-                    
-                    <div class="about-card glass">
-                        <h3>My Skills</h3>
-                        <div class="skills-container">
-                            <div class="skill">
-                                <span>HTML/CSS</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <span>JavaScript</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="80%"></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <span>Data Management</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="85%"></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <span>UI/UX Design</span>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="75%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="about-card glass">
-                        <h3>Education</h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <h4>Software Engineering</h4>
-                                <p>Aptech Garden Center | 2022 - Present</p>
-                                <p>Learning advanced programming concepts, software development methodologies, and practical implementation.</p>
-                            </div>
-                            <div class="timeline-item">
-                                <h4>Pre-Engineering</h4>
-                                <p>Islamia Govt Science College Karachi | 2022 - 2024</p>
-                                <p>Completed intermediate education with focus on physics, chemistry, and mathematics.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="about-card glass">
-                        <h3>Experience</h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <h4>Data Manager</h4>
-                                <p>Driver Care Company | Current</p>
-                                <p>Managing and organizing company data, ensuring data integrity, and creating reports for business decisions.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <h2 class="section-title">My <span>Projects</span></h2>
-                <div class="projects-grid">
-                    <div class="project-card glass">
-                        <div class="project-image">
-                            <img src="./assets/img/portfolio/app-1.jpg" alt="Project 1">
-                        </div>
-                        <div class="project-info">
-                            <h3>Fitnees Club</h3>
-                            <p>My first responsive website built with modern technologies.</p>
-                            <a href="https://eprojects.azfamtech.com/fitnessclub/" class="btn small">View Project</a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card glass">
-                        <div class="project-image">
-                            <img src="./assets/img/portfolio/branding-2.jpg" alt="Project 2">
-                        </div>
-                        <div class="project-info">
-                            <h3>Naico And Company</h3>
-                            <p>This is website of welding hardware store.</p>
-                            <a href="https://lawfirm.pqik.pk/" class="btn small">View Project</a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card glass">
-                        <div class="project-image">
-                            <img src="./assets/img/portfolio/product-2.jpg" alt="Project 3">
-                        </div>
-                        <div class="project-info">
-                            <h3>Naico Traders</h3>
-                            <p>This is well known shop of pulleys.</p>
-                            <a href="https://naicotrader.com/" class="btn small">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 class="section-title">Get In <span>Touch</span></h2>
-                <div class="contact-grid">
-                    <div class="contact-info glass">
-                        <h3>Contact Information</h3>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <p>+92 336 6630630</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <p>sabaabdullah416@gmail.com</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Karachi, Pakistan</p>
-                        </div>
-                        <div class="social-links">
-                            <a href="https://github.com/abdullahbinsaba"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="glass-footer">
-        <div class="container">
-            <p>&copy; 2024 Abdullah Bin Saba. All Rights Reserved.</p>
+        <div class="project-card">
+          <h2>ERP System</h2>
+          <p>A powerful business management solution with secure login, inventory, and finance modules.</p>
         </div>
-    </footer>
+        <div class="project-card">
+          <h2>Portfolio</h2>
+          <p>This 3D world portfolio — a unique fusion of creativity and code!</p>
+        </div>
+      </div>
+      <button id="back-from-projects" class="btn back-btn">Back</button>
+    </div>
+  </section>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/theme-switcher.js"></script>
+  <!-- ===================== FUN ZONE PAGE ===================== -->
+  <section id="fun-page" class="overlay hidden">
+    <div class="overlay-content">
+      <h1>Welcome to the Fun Zone 🎮</h1>
+      <p>This is my creative sandbox where I experiment with design, animation, and motion graphics. 
+        Keep exploring, the road never ends!</p>
+      <button id="back-from-fun" class="btn back-btn">Back</button>
+    </div>
+  </section>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/16/audio_4aaf96cbd3.mp3" type="audio/mp3">
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
