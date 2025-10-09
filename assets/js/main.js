@@ -1,40 +1,95 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Safe element selection with null checks
-    const getElement = (selector) => {
-        const el = document.querySelector(selector);
-        if (!el) console.warn(`Element not found: ${selector}`);
-        return el;
-    };
+// Element references
+const intro = document.getElementById("intro-screen");
+const yesBtn = document.getElementById("yes-btn");
+const noBtn = document.getElementById("no-btn");
+const loader = document.getElementById("loading-screen");
+const canvas = document.getElementById("scene");
+const bgMusic = document.getElementById("bg-music");
 
-    const getElements = (selector) => {
-        const els = document.querySelectorAll(selector);
-        if (els.length === 0) console.warn(`No elements found: ${selector}`);
-        return els;
-    };
+// Page references
+const aboutPage = document.getElementById("about-page");
+const contactPage = document.getElementById("contact-page");
+const projectsPage = document.getElementById("projects-page");
+const funPage = document.getElementById("fun-page");
 
-    // Cursor Effect
-    const cursor = getElement('.cursor');
-    const cursorFollower = getElement('.cursor-follower');
-    
-    if (cursor && cursorFollower) {
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = `${e.clientX}px`;
-            cursor.style.top = `${e.clientY}px`;
-            
-            setTimeout(() => {
-                cursorFollower.style.left = `${e.clientX}px`;
-                cursorFollower.style.top = `${e.clientY}px`;
-            }, 100);
-        });
-        
-        // Interactive elements effect
-        const interactiveElements = getElements('a, button, .project-card, .about-card, input, textarea');
-        
-        interactiveElements.forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(1.5)';
-                cursorFollower.style.transform = 'scale(0.5)';
-                cursorFollower.style.backgroundColor = 'rgba(108, 99, 255, 0.3)';
+// Show loader after clicking yes
+yesBtn.addEventListener("click", () => {
+  intro.style.display = "none";
+  loader.classList.remove("hidden");
+  setTimeout(() => {
+    loader.classList.add("hidden");
+    canvas.classList.remove("hidden");
+    bgMusic.play();
+    init3D();
+  }, 3500);
+});
+
+// No button runs away
+noBtn.addEventListener("mouseover", () => {
+  noBtn.style.position = "absolute";
+  noBtn.style.top = `${Math.random() * 80 + 10}%`;
+  noBtn.style.left = `${Math.random() * 80 + 10}%`;
+});
+
+// ======== 3D Scene Setup ========
+function init3D() {
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor(0x000000);
+
+  // Lighting
+  const ambient = new THREE.AmbientLight(0xffffff, 0.5);
+  scene.add(ambient);
+
+  const directional = new THREE.DirectionalLight(0xffffff, 1);
+  directional.position.set(5, 10, 7);
+  scene.add(directional);
+
+  // Ground
+  const groundGeo = new THREE.PlaneGeometry(200, 200);
+  const groundMat = new THREE.MeshStandardMaterial({ color: 0x111111 });
+  const ground = new THREE.Mesh(groundGeo, groundMat);
+  ground.rotation.x = -Math.PI / 2;
+  scene.add(ground);
+
+  // Car
+  const loader = new THREE.GLTFLoader();
+  let car;
+  loader.load("https://threejs.org/examples/models/gltf/Ferrari.glb", (gltf) => {
+    car = gltf.scene;
+    car.scale.set(1.5, 1.5, 1.5);
+    scene.add(car);
+  });
+
+  camera.position.set(0, 5, 10);
+
+  // Movement
+  let speed = 0;
+  const keys = {};
+
+  window.addEventListener("keydown", (e) => (keys[e.key.toLowerCase()] = true));
+  window.addEventListener("keyup", (e) => (keys[e.key.toLowerCase()] = false));
+
+  function animate() {
+    requestAnimationFrame(animate);
+    if (car) {
+      if (keys["w"]) speed += 0.02;
+      if (keys["s"]) speed -= 0.02;
+      if (keys["a"]) car.rotation.y += 0.05;
+      if (keys["d"]) car.rotation.y -= 0.05;
+
+      car.position.x -= Math.sin(car.rotation.y) * speed;
+      car.position.z -= Math.cos(car.rotation.y) * speed;
+      speed *= 0.95; // friction
+      camera.position.lerp(new THREE.Vector3(car.position.x, car.position.y + 5, car.position.z + 10), 0.05);
+      camera.lookAt(car.position);
+    }
+    renderer.render(scene, camera);
+  }
+  animate();
+}                cursorFollower.style.backgroundColor = 'rgba(108, 99, 255, 0.3)';
             });
             
             el.addEventListener('mouseleave', () => {
