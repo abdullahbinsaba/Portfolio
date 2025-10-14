@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Bin Saba | Full Stack Developer</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+        <div class="quantum-loader">
+            <div class="quantum-particle"></div>
+            <div class="quantum-particle"></div>
+            <div class="quantum-particle"></div>
+        </div>
+        <div class="loading-text">Initializing Quantum Portfolio</div>
+    </div>
+
+    <!-- Logo Entrance -->
+    <div id="logoEntrance">
+        <div class="logo-container">
+            <div class="glowing-logo">A</div>
+            <div class="logo-text">
+                <span class="logo-name">ABDULLAH</span>
+                <span class="logo-subtitle">BIN SABA</span>
+            </div>
+        </div>
+        <div class="welcome-statement">
+            <div class="welcome-text">Welcome to Abdullah's Digital Universe</div>
+            <div class="enter-portfolio">Enter Portfolio</div>
+        </div>
+    </div>
+
+    <!-- Main Portfolio -->
+    <div id="mainPortfolio" class="hidden">
+        <!-- Navigation -->
+        <nav class="quantum-nav">
+            <div class="nav-logo">
+                <div class="nav-glowing-logo">A</div>
+                <span>Abdullah</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="quantum-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="title-glow">ABDULLAH BIN SABA</span>
+                        </h1>
+                        <h2 class="hero-subtitle">
+                            Full Stack <span class="accent-text">Developer</span>
+                        </h2>
+                        <p class="hero-description">
+                            Crafting digital experiences that blend innovation with functionality. 
+                            Transforming ideas into exceptional web solutions.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="quantum-btn primary" onclick="scrollToSection('projects')">View My Work</button>
+                            <button class="quantum-btn secondary" onclick="downloadCV()">Download CV</button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="profile-cards-container">
+                            <div class="profile-card" data-card="1">
+                                <div class="card-image">
+                                    <img src="./assets/images/profile1.JPG" alt="Abdullah Professional Headshot" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'">
+                                </div>
+                                <div class="card-content">
+                                    <h3>Professional</h3>
+                                    <p>Full Stack Developer</p>
+                                </div>
+                            </div>
+                            <div class="profile-card" data-card="2">
+                                <div class="card-image">
+                                    <img src="./assets/images/profile2.JPG" alt="Abdullah Casual Photo" onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'">
+                                </div>
+                                <div class="card-content">
+                                    <h3>Creative</h3>
+                                    <p>Problem Solver</p>
+                                </div>
+                            </div>
+                            <div class="profile-card" data-card="3">
+                                <div class="card-image">
+                                    <img src="./assets/images/profile3.jpg" alt="Abdullah Working" onerror="this.src='https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'">
+                                </div>
+                                <div class="card-content">
+                                    <h3>Innovative</h3>
+                                    <p>Tech Enthusiast</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="quantum-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>My Journey</h3>
+                                <div class="card-icon">
+                                    <i class="fas fa-user"></i>
+                                    <p>Hover to explore</p>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="about-text-content">
+                                    <p class="intro">Hello! I'm Abdullah Bin Saba, a 20-year-old full stack developer based in Karachi, Pakistan.</p>
+                                    
+                                    <div class="education-section">
+                                        <h4>Education & Experience</h4>
+                                        <div class="timeline-item">
+                                            <strong>Software Engineering</strong>
+                                            <span>Aptech | 2023 - Present</span>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <strong>Data Manager</strong>
+                                            <span>Driver Care Company | 2023 - Present</span>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <strong>Matriculation</strong>
+                                            <span>Mama Baby Care School Karachi | 2022</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="passion">I'm passionate about creating digital solutions that make a difference. My journey in technology started at a young age, and I've been constantly learning and evolving ever since.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>My Mission</h3>
+                                <div class="card-icon">
+                                    <i class="fas fa-rocket"></i>
+                                    <p>Tap to discover</p>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <p>To create innovative digital solutions that solve real-world problems. I believe in clean code, user-centered design, and continuous learning to deliver exceptional experiences.</p>
+                                <div class="mission-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">10+</span>
+                                        <span class="stat-label">Projects</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">2+</span>
+                                        <span class="stat-label">Years Experience</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">100%</span>
+                                        <span class="stat-label">Dedication</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>My Values</h3>
+                                <div class="card-icon">
+                                    <i class="fas fa-heart"></i>
+                                    <p>Click to see more</p>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <ul class="values-list">
+                                    <li>
+                                        <i class="fas fa-code"></i>
+                                        <span>Clean & Efficient Code</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-users"></i>
+                                        <span>User-Centered Design</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-lightbulb"></i>
+                                        <span>Innovation & Creativity</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span>Continuous Learning</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="quantum-container">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-grid">
+                    <!-- Skill cards will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="quantum-container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project cards will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="quantum-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>sabaabdullah416@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+92 336 6630630</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Karachi, Pakistan</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" class="form-input" required>
+                        <input type="email" placeholder="Your Email" class="form-input" required>
+                        <textarea placeholder="Your Message" class="form-textarea" required></textarea>
+                        <button type="submit" class="quantum-btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/923366630630" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Scroll to Top -->
+        <button class="scroll-top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
